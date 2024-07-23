@@ -1,0 +1,63 @@
+<div class="review-box">
+	<div class="image-container">
+	<img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg" alt="Image">
+	</div>
+	<div class="review-content">
+		<h1>Edit Review: {{stall_name}}</h1>
+		<form id="reviewForm" onsubmit="return checkEditForm()" method="post">
+		<tr>
+		<td><h2><label>Review</label></h2></td>
+		<td><textarea id="review" name="review" rows="8" cols="50" placeholder="Write your review here..."></textarea></td>
+		</tr>
+		<tr>
+		<div class="rating-container">
+			<td><h2><label>Food Quality</label></h2></td>
+			<td>
+			<select name="rating" id="rating1">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			</select>
+			</td>
+		</div>
+		</td>
+		</tr>
+		<tr>
+		<div class="rating-container">
+			<td><h2><label>Service</label></h2></td>
+			<td>
+			<select name="rating" id="rating2">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			</select>
+			</td>
+		</div>
+		</td>
+		</tr>
+		<tr>
+		<div class="rating-container">
+			<td><h2><label>Cleanliness</label></h2>
+			<select name="rating" id="rating3">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+			</select>
+			</td>
+		</div>
+		</td>
+		</tr>
+		<tr>
+		<td><h3><label for="profile-picture" class="profile-label">Upload Pictures</label></h3></td>
+		<td><h3><input type="file" id="profile-picture" accept="image/*" placeholder="Upload Media"></h3></td>
+		</tr>
+		<button type="submit">Submit</button>
+		</form>
+	</div>
+</div>

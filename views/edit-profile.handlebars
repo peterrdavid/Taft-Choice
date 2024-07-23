@@ -1,0 +1,39 @@
+<div class="body-parent">
+    {{>navigation}}
+
+    <div class="main-area">
+        <div class="edit-title">
+            <h1>Edit Profile Details</h1>
+        </div>
+        <form id="profileForm" onsubmit="return checkForm()">
+            <div class="container">
+                <label>Name </label>
+                <input type="text" placeholder="Enter Name" name="name" required> <br> 
+                <label>Username </label>   
+                <input type="text" placeholder="Enter Username" name="username" required><br>  
+                <label>Bio</label>
+                <input type="text" placeholder="Enter a Bio" name="bio"/><br>
+                <label>Your Profile Picture</label>
+                <input type="file" name="myImage" accept="image/*" /><br>
+                <button type="submit" id="save">Save</button>
+            </div>
+        </form>
+        </div>
+    </div>
+
+<script>
+    function checkForm() {
+        var name = document.forms["profileForm"]["name"].value;
+        var username = document.forms["profileForm"]["username"].value;
+        var bio = document.forms["profileForm"]["bio"].value;
+    
+        if (name.trim() === "" || username.trim() === "") {
+            alert("All necessary fields must be filled out");
+            return false;
+        }
+        else {
+            window.history.back();
+            return false;
+        }
+    }
+</script>
